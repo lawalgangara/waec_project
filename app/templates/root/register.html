@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register To do your WAEC in our school</title>
+    <link rel="stylesheet" href="../../static/root/css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+        <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                    <h2 id="heading">Get Registered For 2024 WAEC Exam</h2>
+                    <p>Fill all form field to go to next step</p>
+
+                    <form id="msform" >
+                        <!-- progressbar -->
+                        <ul id="progressbar">
+                            <li class="active" id="account"><strong>Account</strong></li>
+                            <li id="personal"><strong>Personal</strong></li>
+                            <li id="payment"><strong> Exam</strong></li>
+                            <li id="confirm"><strong>Finish</strong></li>
+                        </ul>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div> <br> <!-- fieldsets -->
+                       
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Candidate Information:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 1 - 4</h2>
+                                    </div>
+                                </div>  
+                                <label class="fieldlabels">Exam Name:</label> 
+                                <input type="text" name="event_name" placeholder="Exam Name" />
+
+                                 <label class="fieldlabels">Exam Venue:</label>
+                                  <input type="text" name="event_venue" placeholder="Venue" />
+
+                                  <label class="fieldlabels">Eligibility:</label> 
+                                  <input type="text" name="eligibility" placeholder="Eligibility" />
+
+                                  <label class="fieldlabels">Exam Date:</label>
+                                   <input type="date" name="event_date" placeholder="Exam Date" />
+
+                            </div> <input type="button" name="next" class="next action-button" value="Next" />
+                        </fieldset>
+
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Personal Information:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 2 - 4</h2>
+                                    </div>
+                                </div> 
+
+                                <label class="fieldlabels">First Name: *</label> 
+                                <input type="text" name="first_name" placeholder="First Name" />
+                                
+                                <label class="fieldlabels">Last Name: *</label>
+                                <input type="text" name="last_name" placeholder="Last Name" />
+
+                                <label class="fieldlabels">Sex: *</label> 
+                                <select name="sex">
+                                    <option value="male">Male </option>
+                                    <option value="female">Female</option>
+                                </select>
+                                
+                                <label class="fieldlabels">Age: *</label> 
+                                <input type="number" name="age" placeholder="Age" />
+                                
+                                <label class="fieldlabels">Email: *</label> 
+                                <input type="email" name="email" placeholder="Email Address" />
+                                
+                                <label class="fieldlabels">Contact No.: *</label> 
+                                <input type="text" name="contact_no" placeholder="Contact Number" />
+                                
+                                <label class="fieldlabels">Country Of Residence: *</label> 
+                                <input type="text" name="country_of_residence" placeholder="Country Of Residence" />
+                                
+                                
+                                
+                            </div> 
+                            
+                            <input type="button" name="next" class="next action-button" value="Next" /> 
+                            
+                            <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        </fieldset>
+                       
+                       
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Exam Confirmation:</h2>
+                                    </div>
+        
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 3 - 4</h2>
+                                    </div>
+                                </div>
+
+                                 <label  class="fieldlabels" for="ticket_type">Type of Candidate:</label>
+                                <select id="payment_method" name="ticket_type" required>
+                                    <option disabled selected>Select an option</option>
+                                    <option value="regular">Internal Student</option>
+                                    <option value="speaker_vip">External Student</option>
+                                </select>
+
+                                <label class="fieldlabels">Select Subjects (5 to 9):</label>
+<div id="selected_subject">
+    <label><input type="checkbox" name="selected_subject[]" value="Mathematics"> Mathematics</label><br>
+    <label><input type="checkbox" name="selected_subject[]" value="English"> English</label><br>
+    <label><input type="checkbox" name="selected_subject[]" value="Physics"> Physics</label><br>
+    <label><input type="checkbox" name="selected_subject[]" value="Chemistry"> Chemistry</label><br>
+    <label><input type="checkbox" name="selected_subject[]" value="Economics"> Economics</label><br>
+    <label><input type="checkbox" name="selected_subject[]" value="Biology"> Biology</label><br>
+    <label><input type="checkbox" name="selected_subject[]" value="Geography"> Geography</label><br>
+    <label><input type="checkbox" name="selected_subject[]" value="Marketing"> Marketing</label><br>
+    <label><input type="checkbox" name="selected_subject[]" value="Agricultural Science"> Agricultural Science</label><br>
+    <label><input type="checkbox" name="selected_subject[]" value="Civic Education"> Civic Education</label><br>
+    <label><input type="checkbox" name="selected_subject[]" value="Computer"> Computer</label><br>
+</div>
+
+
+                            </div> 
+                            <input type="submit" name="next" class="next action-button" value="Submit" /> 
+                            <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                        </fieldset>
+
+
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Finish:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 4 - 4</h2>
+                                    </div>
+                                </div> <br><br>
+                                <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+                                <div class="row justify-content-center">
+                                    <div class="col-3"> <img src="../../static/root/img/Confirm.png" class="fit-image"> </div>
+                                </div> <br><br>
+                                <div class="row justify-content-center">
+                                    <div class="col-7 text-center">
+                                        <h5 class="purple-text text-center">You Have Successfully Register for 2024 WAEC</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../../static/root/js/register.js"></script>
+</body>
+</html>
