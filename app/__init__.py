@@ -1,26 +1,34 @@
-from flask import Flask 
+from flask import Flask
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
+from flask_login import LoginManager
 import os
 
-# Initialize Flask app
 app = Flask(__name__)
 app.config.from_object(Config)
+
+# Set SQLALCHEMY_TRACK_MODIFICATIONS
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Create an instance of LoginManager and initialize it
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'login_page'
 
 # Load environment variables from .env file
 load_dotenv()
 
-# Set Flask app secret key
-app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
+# Load secret key from environment variable
+app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 
-# Set SQLAlchemy database URI
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DB_URI")
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# Load database URI from environment variable
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DB_URI')
 
-# Initialize SQLAlchemy database instance
 db = SQLAlchemy(app)
 
-# Import routes ( defined in app/routes/root.py)
 from app.routes.root import *
+from app.routes.admin import *
+from app.models.user import *
+from app.models.admin import *
 
