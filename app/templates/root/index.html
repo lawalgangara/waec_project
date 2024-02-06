@@ -62,7 +62,7 @@
           <li><a href="#gallery"></a></li>
           <li><a href="#sponsors">Find a Sponsors</a></li>
           <li><a href="#contact"></a></li>
-          <li class="buy-tickets"><a href="#Register-Your_WAEC">Register Your WAEC</a></li>
+          <li class="buy-tickets"><a href="{{ url_for('register_page') }}">Register Your WAEC</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -79,6 +79,7 @@
       
       <a href="https://www.youtube.com/watch?v=8zdNfzntLa8" class="venobox play-btn mb-4" data-vbtype="video"
         data-autoplay="true"></a>
+        <a href="{{ url_for('register_page') }}" class="about-btn scrollto">Register Your WAEC</a>
       
     </div>
   </section>
