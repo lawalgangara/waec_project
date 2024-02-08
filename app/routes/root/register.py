@@ -8,10 +8,12 @@ def register_page():
     admin_event = Event.query.first()
     if request.method == 'POST':
         form_data = request.form
+        # Convert age to integer
+        age = int(form_data['age'])
         new_registration = waec_registration(
             first_name=form_data['first_name'],
             last_name=form_data['last_name'],
-            age=form_data['age'],
+            age=age,
             sex=form_data['sex'],
             email=form_data['email'],
             type_of_exam=form_data['exam_type'],
@@ -31,5 +33,6 @@ def register_page():
 
 @app.route('/user_inputs')
 def user_inputs():
-    registrations = waec_registration.query.all()
-    return render_template('root/user_inputs.html', registrations=registrations)
+    # Display all user input from database
+    waec_registrations = waec_registration.query.all()
+    return render_template('root/user_inputs.html', waec_registrations=waec_registrations)

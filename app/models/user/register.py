@@ -7,7 +7,7 @@ class waec_registration(db.Model):
     
     first_name = db.Column(db.String(100), nullable=False)
     last_name = db.Column(db.String(100), nullable=False)
-    age = db.Column(db.String(100), nullable=False)
+    age = db.Column(db.Integer, nullable=False)  # Corrected
     sex = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     type_of_exam = db.Column(db.String(50), nullable=False)

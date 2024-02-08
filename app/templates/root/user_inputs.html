@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Inputs</title>
 </head>
 <body>
-    <h1>All user inputs</h1>
+    <h1>All User Inputs</h1>
 
-    {% for registration in registrations%}
-
+    {% for registration in waec_registrations %}
     <div>
-        <h2> {{registration.first_name}} {{registration.last_name}}</h2>
-        <p> {{registration.email}}</p>
-        <p> {{registration.contact_no}} </p>
-        <p> {{registration.event_name}}</p>
+        <h2>{{ registration.first_name }} {{ registration.last_name }}</h2>
+        <p>Email: {{ registration.email }}</p>
+        <p>Contact Number: {{ registration.contact_no }}</p>
+        <p>Sex: {{ registration.sex }}</p>
+        <p>Age: {{ registration.age }}</p>
+        <p>Exam Name: {{ registration.exam_name }}</p>
+        <p>Exam Venue: {{ registration.exam_venue }}</p>
     </div>
-
     <hr>
     {% endfor %}
-    
 </body>
 </html>
