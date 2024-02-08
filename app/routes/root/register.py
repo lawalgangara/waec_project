@@ -35,4 +35,5 @@ def register_page():
 def user_inputs():
     # Display all user input from database
     waec_registrations = waec_registration.query.all()
-    return render_template('root/user_inputs.html', waec_registrations=waec_registrations)
+    return render_template('root/user_inputs.html', registrations=waec_registrations)
+
